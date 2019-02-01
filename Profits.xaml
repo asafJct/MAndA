@@ -1,0 +1,52 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PLForms" x:Class="PLForms.Profits"
+        Title="Profits" Height="300" Width="300">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="30" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="Foreground" Value="Crimson"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+        </Style>
+        <Style TargetType="Grid"></Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions >
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Profits by:" Grid.Row="0"/>
+                <Button x:Name="dish" Content="dish" Grid.Row="1"  Width="75" Click="dish_Click" FontFamily="Segoe UI" />
+                <Button x:Name="hechsher" Content="hechsher" Grid.Row="2" Width="75"/>
+                <Button x:Name="place" Content="place" Grid.Row="3" Width="75"/>
+                <Button x:Name="date" Content="date" Grid.Row="4" Width="75"/>
+                <local:ProfitByDish Grid.Column="1" Grid.Row="0" Grid.RowSpan="5"  />
+
+            </Grid>
+        </Grid>
+        <Label FontSize="24" Content="Profits" />
+
+        <!--<ComboBox x:Name="ProfitsComboBox" SelectionChanged="ProfitsComboBox_SelectionChanged" >
+                <ComboBoxItem  Content="dish"/>
+                <ComboBoxItem  Content="hechsher" IsSelected="True"/>
+                <ComboBoxItem  Content="place" />
+                <ComboBoxItem  Content="date"/>
+            </ComboBox>-->
+    </Grid>
+</Window>

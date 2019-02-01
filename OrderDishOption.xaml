@@ -1,0 +1,43 @@
+﻿<Window x:Class="PLForms.OrderDishOption"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OrderDishOption" Height="550" Width="550">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="FontFamily" Value="Segoe Print" />
+            <Setter Property="Foreground" Value="DeepPink"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+        </Style>
+        <Style TargetType="Grid"></Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush TileMode="FlipXY" ImageSource="images/ord1.jpg" />
+        </Grid.Background>
+        <Button x:Name="AddOrderDish" Content="Add Order-Dish" Margin="136,170,134,288" Grid.Row="0" Click="AddOrderDish_Click"  />
+        <Button x:Name="DeleteOrderDish" Content="Delete Order-Dish" Margin="136,265,134,197" Click="DeleteOrderDish_Click"  />
+        <Button x:Name="UpdateOrderDish" Content="Update Order-Dish" Margin="138,350,134,108" RenderTransformOrigin="0.5,0.5" Click="UpdateOrderDish_Click" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.084"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.558"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="       Options: " HorizontalAlignment="Left" Margin="133,59,0,0" VerticalAlignment="Top" Height="62" Width="284" FontFamily="Segoe Print" FontSize="30" Foreground="IndianRed"/>
+        <Button x:Name="ListOfOrderDishes" Content="All order-dishes" Margin="80,441,131,17" RenderTransformOrigin="0.5,0.5" Click="ListOfOrderDishes_Click" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.084"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.558"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</Window>

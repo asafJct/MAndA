@@ -1,0 +1,53 @@
+﻿<Window x:Class="PLForms.DeleteOrderDish"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DeleteOrderDish" Height="431.702" Width="408.894">
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="images/ord1.jpg" Opacity="0.7"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="Delete Order dish" Foreground="DeepPink" Background="{x:Null}" FontSize="25" FontFamily="Segoe Print" BorderBrush="{x:Null}" ></Label>
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="order number:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <ComboBox x:Name="orderNumberComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" SelectedItem="{Binding orderNumber}" VerticalAlignment="Center" Width="120" SelectionChanged="orderNumberComboBox_SelectionChanged"/>
+            <Label Content="dish Name:" VerticalAlignment="Center" Grid.Row="1" Margin="1" HorizontalAlignment="Left" Grid.Column="0" />
+            <ComboBox x:Name="dishNameComboBox" Width="120" VerticalAlignment="Center" SelectedItem="{Binding dishName, Mode=TwoWay}" Grid.Row="1" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+        </Grid>
+        <Button x:Name="deleteOrder" Content="Delete"  HorizontalAlignment="Left" Grid.Row=" 2 " VerticalAlignment="Top"  Width="123" Height="46" Foreground="DeepPink" Background="{x:Null}" FontSize="25" FontFamily="Segoe Print" BorderBrush="{x:Null}"  Click="deleteOrderDish_Click" />
+        <!--<Button.Style>
+                <Style>   
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=clientAddressTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=cardNameTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=clientNameTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=clientPhoneNomberTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=clientCityTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>-->
+
+    </Grid>
+</Window>

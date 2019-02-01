@@ -1,0 +1,52 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:BE="clr-namespace:BE;assembly=BE" mc:Ignorable="d" x:Class="PLForms.UpdateDish"
+         Title="UpdateDish" Height="420" Width="402" >
+    <!--<Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        -->
+    <!--<Style TargetType="Grid"></Style>-->
+    <!--
+    </Window.Resources>-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="UpdateButton" Content="Update" FontSize="30" Grid.Row="2" Margin="10" Click="UpdatDishButton_Click" />
+        <Label x:Name="label" Content="Update Dish" FontSize="30" Margin="0"/>
+        <Grid x:Name="gridUpdateDish" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="dish Id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <ComboBox x:Name="dishIdComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" SelectedItem="{Binding dishId,Mode=TwoWay,NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120" SelectionChanged="dishIdComboBox_SelectionChanged">
+            </ComboBox>
+            <Label Content="dish Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBox x:Name="dishNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding dishName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="dish Price:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="dishPriceTextBlock"  Grid.Column="1" HorizontalAlignment="Left" Margin="3,6,0,5" Grid.Row="2" VerticalAlignment="Center" Width="120" Text="{Binding dishPrice, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" />
+            <Label Content="dish Size:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+            <ComboBox x:Name="dishSizeComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" SelectedItem="{Binding dishSize,Mode=TwoWay}" Margin="3" Grid.Row="3" VerticalAlignment="Center" Width="120">
+            </ComboBox>
+            <Label Content="hechsher:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
+            <ComboBox x:Name="hechsherComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" SelectedItem="{Binding hechsher,Mode=TwoWay}" Margin="3" Grid.Row="4" VerticalAlignment="Center" Width="120">
+            </ComboBox>
+        </Grid>
+    </Grid>
+</Window>

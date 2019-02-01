@@ -1,0 +1,49 @@
+﻿<Window x:Class="PLForms.OrderOption"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OrderOp"  Height="550" Width="550">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="30" />
+            <Setter Property="FontFamily" Value="Segoe Print" />
+            <Setter Property="Foreground" Value="DeepPink"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+        </Style>
+        <Style TargetType="Grid"></Style>
+    </Window.Resources>
+    <Grid>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition />
+
+        </Grid.RowDefinitions>-->
+        <Grid.Background>
+            <ImageBrush TileMode="FlipXY" ImageSource="images/ord1.jpg" />
+        </Grid.Background>
+        <Button x:Name="AddOrder" Content="Add Order" Margin="136,170,134,288" Grid.Row="0" Click="AddOrder_Click" />
+        <Button x:Name="DeleteOrder" Content="Delete Order" Margin="136,265,134,197" Click="DeleteOrder_Click" />
+        <Button x:Name="UpdateOrder" Content="Update Order" Margin="138,350,134,108" RenderTransformOrigin="0.5,0.5" Click="UpdateOrder_Click">
+            <!--<Button x:Name="TotalPayment" Content="Total payment" Margin="138,400,134,80" />-->
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.084"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.558"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="       Options: " HorizontalAlignment="Left" Margin="133,59,0,0" VerticalAlignment="Top" Height="62" Width="284" FontFamily="Segoe Print" FontSize="30" Foreground="IndianRed"/>
+        <Button x:Name="ListofOrders" Content="List of Orders" Margin="68,438,80,17" RenderTransformOrigin="0.5,0.5" >
+            <!--<Button x:Name="TotalPayment" Content="Total payment" Margin="138,400,134,80" />-->
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.084"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.558"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</Window>

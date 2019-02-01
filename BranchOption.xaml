@@ -1,0 +1,44 @@
+﻿<Window x:Class="PLForms.BranchOption"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BranchOp"  Height="550" Width="550">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="30" />
+            <Setter Property="FontFamily" Value="Segoe Print" />
+            <Setter Property="Foreground" Value="DeepPink"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+        </Style>
+        <Style TargetType="Grid">
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush TileMode="FlipXY" ImageSource="images/bra3.jpg" Opacity="0.90" />
+        </Grid.Background>
+        <Button x:Name="AddBranch" Content="Add Branch" Margin="136,170,134,288" Grid.Row="0" Click="AddBranch_Click"/>
+        <Button x:Name="DeleteBranch" Content="Delete Branch" Margin="136,266,134,196" Click="DeleteBranch_Click"/>
+        <Button x:Name="UpdateBranch" Content="Update Branch" Margin="138,365,134,101" RenderTransformOrigin="0.5,0.5" Click="UpdateBranch_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.084"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.558"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="   Options: " HorizontalAlignment="Left" Margin="133,59,0,0" VerticalAlignment="Top" Height="62" Width="284" FontFamily="Segoe Print" FontSize="40" Foreground="IndianRed"/>
+        <Button x:Name="ListofBranches" Content="All Branches" Margin="92,436,91,22" RenderTransformOrigin="0.5,0.5" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.084"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.558"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</Window>
